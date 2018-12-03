@@ -1,0 +1,36 @@
+:root {
+  --main-color: #6699ff;
+  --padding: 10px;
+  --blur: 0px;
+}
+
+body {
+  background-color: #036;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 5em;
+}
+
+.color {
+  color: var(--main-color);
+}
+
+label {
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+img {
+  height: 500px;
+  margin: 4em;
+  background-color: var(--main-color);
+  padding: var(--padding);
+  filter: blur(var(--blur));
+}

@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: #018DED url(http://unsplash.it/1500/1000?image=881&blur=50);
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
+  /* box-shadow: right_shadow bottom-shadow blur spread color(default: text color) inset|initial|inherit*/
+  box-shadow: 0 0 3px .3em lightgray,
+  0 0 0 1.5em white,
+  0 0 2px 1.7em rgba(0, 0, 0, 0.2);
+  height: 325px;
+  width: 325px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock-face {
+  height: 100%;
+  width: 100%;
+  margin: .7em;
+  position: relative;
+}
+
+.hand {
+  height: .4em;
+  width: 50%;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
