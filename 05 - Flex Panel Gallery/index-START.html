@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    *, 
+    *::before, 
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .flex {
+      display: flex;
+    }
+    
+    .lets {
+      background-image: url('lets.jpg');
+      
+    }
+
+    .take {
+      background-image: url('take.jpg');
+    }
+
+    .it {
+      background-image: url('it.jpg');
+    }
+
+    .all {
+      background-image: url('all.jpg');
+    }
+
+    .in {
+      background-image: url('in.jpg');
+    }
+
+    .flex-item {
+      flex: 20%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3em;
+      font-family: sans-serif;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="flex">
+    <!-- Photo by Matthew Ronder-Seid on Unsplash -->
+    <div class="lets flex-item"><h2>Let's</h2></div>
+    <!-- Photo by Stephen Leonardi on Unsplash -->
+    <div class="take flex-item"><h2>Take</h2></div>
+    <!-- Photo by Mohamed Ahsan on Unsplash -->
+    <div class="it flex-item"><h2>It</h2></div>
+    <!-- Photo by Ben Klea on Unsplash -->
+    <div class="all flex-item"><h2>All</h2></div>
+    <!-- Photo by didin emelu on Unsplash -->
+    <div class="in flex-item"><h2>In</h2></div>
+  </div>
+</body>
+</html>
