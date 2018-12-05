@@ -59,6 +59,22 @@
       font-size: 5em;
     }
 
+    .hidden {
+      visibility: hidden;
+    }
+
+    .clicked {
+      flex: 50%;
+    }
+
+    .clicked .hidden {
+      visibility: visible;
+    }
+
+    .clicked .main {
+      font-size: 8em;
+    }
+
 
   </style>
 </head>
@@ -96,7 +112,15 @@
     </div>
   </div>
   <script>
-
+    let flexContainer = document.querySelector('.flex');
+    flexContainer.addEventListener('click', (e) => {
+      let elemClasses = e.target.classList.contains('flex-item') ? e.target.classList : e.target.parentElement.classList;
+      if (elemClasses.contains('clicked')) {
+        elemClasses.remove('clicked');
+      } else {
+        elemClasses.add('clicked');
+      }
+    });
   </script>
 </body>
 </html>
