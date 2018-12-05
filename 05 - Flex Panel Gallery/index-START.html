@@ -45,27 +45,58 @@
       background-repeat: no-repeat;
       color: white;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      justify-content: space-around;
       align-items: center;
-      font-size: 3em;
       min-width: min-content;
+      text-transform: uppercase;
       text-shadow: 5px 5px 2px black;
+      font-weight: 600;
     }
+
+    .hidden,
+    .main {
+      font-size: 5em;
+    }
+
 
   </style>
 </head>
 <body>
   <div class="flex">
     <!-- Photo by Matthew Ronder-Seid on Unsplash -->
-    <div class="lets flex-item"><h2>Let's</h2></div>
+    <div class="lets flex-item">
+      <p class="hidden">Hey</p>
+      <p class="main">Let's</p>
+      <p class="hidden">Dance</p>
+    </div>
     <!-- Photo by Stephen Leonardi on Unsplash -->
-    <div class="take flex-item"><h2>Take</h2></div>
+    <div class="take flex-item">
+      <p class="hidden">Give</p>
+      <p class="main">Take</p>
+      <p class="hidden">Receive</p>
+    </div>
     <!-- Photo by Mohamed Ahsan on Unsplash -->
-    <div class="it flex-item"><h2>It</h2></div>
+    <div class="it flex-item">
+      <p class="hidden">Experience</p>
+      <p class="main">It</p>
+      <p class="hidden">Today</p>
+    </div>
     <!-- Photo by Ben Klea on Unsplash -->
-    <div class="all flex-item"><h2>All</h2></div>
+    <div class="all flex-item">
+      <p class="hidden">Give</p>
+      <p class="main">All</p>
+      <p class="hidden">You can</p>
+    </div>
     <!-- Photo by didin emelu on Unsplash -->
-    <div class="in flex-item"><h2>In</h2></div>
+    <div class="in flex-item">
+      <p class="hidden">Life</p>
+      <p class="main">In</p>
+      <p class="hidden">Motion</p>
+    </div>
   </div>
+  <script>
+
+  </script>
 </body>
 </html>
