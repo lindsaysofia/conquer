@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Wire+One" rel="stylesheet" />
+  <style>
+    *, 
+    *::before, 
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .flex {
+      display: flex;
+      min-height: 100vh;
+      font-family: 'Wire One', sans-serif;
+    }
+    
+    .lets {
+      background-image: url('lets.jpg');
+      
+    }
+
+    .take {
+      background-image: url('take.jpg');
+    }
+
+    .it {
+      background-image: url('it.jpg');
+    }
+
+    .all {
+      background-image: url('all.jpg');
+    }
+
+    .in {
+      background-image: url('in.jpg');
+    }
+
+    .flex-item {
+      flex: 20%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      min-width: min-content;
+      text-transform: uppercase;
+      text-shadow: 5px 5px 2px black;
+      font-weight: 600;
+      transition: flex 350ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    }
+
+    .hidden,
+    .main {
+      font-size: 5em;
+    }
+
+    .main {
+      transition: font-size 350ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    }
+
+    .hidden {
+      transition: visibility 350ms;
+      visibility: hidden;
+    }
+
+    .clicked {
+      flex: 50%;
+    }
+
+    .clicked .hidden {
+      visibility: visible;
+    }
+
+    .clicked .main {
+      font-size: 8em;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="flex">
+    <!-- Photo by Matthew Ronder-Seid on Unsplash -->
+    <div class="lets flex-item">
+      <p class="hidden">Hey</p>
+      <p class="main">Let's</p>
+      <p class="hidden">Dance</p>
+    </div>
+    <!-- Photo by Stephen Leonardi on Unsplash -->
+    <div class="take flex-item">
+      <p class="hidden">Give</p>
+      <p class="main">Take</p>
+      <p class="hidden">Receive</p>
+    </div>
+    <!-- Photo by Mohamed Ahsan on Unsplash -->
+    <div class="it flex-item">
+      <p class="hidden">Experience</p>
+      <p class="main">It</p>
+      <p class="hidden">Today</p>
+    </div>
+    <!-- Photo by Ben Klea on Unsplash -->
+    <div class="all flex-item">
+      <p class="hidden">Give</p>
+      <p class="main">All</p>
+      <p class="hidden">You can</p>
+    </div>
+    <!-- Photo by didin emelu on Unsplash -->
+    <div class="in flex-item">
+      <p class="hidden">Life</p>
+      <p class="main">In</p>
+      <p class="hidden">Motion</p>
+    </div>
+  </div>
+  <script>
+    let flexContainer = document.querySelector('.flex');
+    flexContainer.addEventListener('click', (e) => {
+      let elemClasses = e.target.classList.contains('flex-item') ? e.target.classList : e.target.parentElement.classList;
+      if (elemClasses.contains('clicked')) {
+        elemClasses.remove('clicked');
+      } else {
+        elemClasses.add('clicked');
+      }
+    });
+  </script>
+</body>
+</html>
